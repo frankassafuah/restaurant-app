@@ -1,8 +1,16 @@
 {
-    "user": [{
-        "id": "1",
-        "name": "Frank",
-        "email": "frank@gmail.com",
-        "password": "password"
-    }]
+  "users": [
+    {
+      "id": "1",
+      "name": "Gideon",
+      "email": "gideon@gmail.com",
+      "password": "password1"
+    },
+    {
+      "name": "Frank",
+      "email": "frank@gmail.com",
+      "password": "password2",
+      "id": "coLOWNG"
+    }
+  ]
 }

@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default { 
     name: "SignUp",
     data() {
@@ -23,8 +24,21 @@ export default {
     },
 
     methods: {
-        signUp() {
-            
+        async signUp() {
+            try {
+                const response = await axios.post("http://localhost:3000/users", 
+                {
+                    name: this.name,
+                    email: this.email,
+                    password: this.password
+                })
+                if(response.status == 201){
+                    alert("Account created successfully")
+                    localStorage.setItem("user-info", JSON.stringify(response.data))
+                }
+            } catch (error) {
+                alert("Please try again something happened")
+            }
         }
     }
 }
