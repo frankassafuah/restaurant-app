@@ -6,6 +6,9 @@
             <input type="text" v-model="email" placeholder="Enter Email" required>
             <input type="password" v-model="password" placeholder="Enter Password" required>
             <button @click="signUp">Sign Up</button>
+            <router-link to="/login">
+                <p>Login</p>
+            </router-link>
         </div>
     </div>
 </template>
