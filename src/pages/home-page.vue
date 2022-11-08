@@ -6,7 +6,15 @@
 
 <script>
 export default {
-    name: 'HomePage'
+    name: 'HomePage',
+
+    created(){
+        //redirect user to sign up page if user is not logged in
+        let user = localStorage.getItem('user-info');
+        if(!user){
+            this.$router.push({name: 'SignUp'})
+        }
+    }
 }
 
 </script>

@@ -7,7 +7,6 @@
             <input type="password" v-model="password" placeholder="Enter Password" required>
             <button @click="signUp">Sign Up</button>
         </div>
-        
     </div>
 </template>
 
@@ -39,6 +38,13 @@ export default {
             } catch (error) {
                 alert("Please try again something happened")
             }
+        }
+    },
+    created(){
+        // redirect user to homepage if user is already logged in
+        let user = localStorage.getItem('user-info');
+        if(user){
+            this.$router.push({name: 'Home'})
         }
     }
 }
