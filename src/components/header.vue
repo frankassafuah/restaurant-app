@@ -3,7 +3,7 @@
         <a href="#">Home</a>
         <a href="#">Add Restaurant</a>
         <a href="#">Update Restaurant</a>
-        <a href="#">Logout</a>
+        <a @click="logout" href="#">Logout</a>
     </div>
 </template>
 
@@ -11,6 +11,12 @@
 
 export default {
     name: 'Header',
+    methods: {
+        logout() {
+            localStorage.clear();
+            this.$router.push({name:'Login'})
+        }
+    }
     
 }
 
