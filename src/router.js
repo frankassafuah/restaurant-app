@@ -16,8 +16,20 @@ const routes = [{
         path: "/login",
         component: () =>
             import ("./pages/login-page.vue"),
-        name: "Login"
-    }
+        name: "Login",
+    },
+    {
+        path: "/add-restaurant",
+        component: () =>
+            import ("./components/add.vue"),
+        name: "AddRestaurant",
+    },
+    {
+        path: "/update-restaurant",
+        component: () =>
+            import ("./components/update.vue"),
+        name: "UpdateRestaurant",
+    },
 ];
 
 const router = createRouter({
