@@ -11,5 +11,24 @@
             "password": "password2",
             "id": "coLOWNG"
         }
+    ],
+    "restaurants": [{
+            "id": "1",
+            "name": "Burger King",
+            "contact": "123455",
+            "address": "Accra mall 50"
+        },
+        {
+            "id": "2",
+            "name": "Dominos",
+            "contact": "1113455",
+            "address": "Kumasi mall 20"
+        },
+        {
+            "id": "3",
+            "name": "KFC",
+            "contact": "3155455",
+            "address": "Takoradi mall 70"
+        }
     ]
 }
