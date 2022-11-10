@@ -1,40 +1,15 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "name": "Gideon",
-      "email": "gideon@gmail.com",
-      "password": "password1"
-    },
-    {
-      "name": "Frank",
-      "email": "frank@gmail.com",
-      "password": "password2",
-      "id": "coLOWNG"
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": "DHCNt4q"
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": "925hCS8"
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": "XewXATL"
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": "DZDqCRI"
-    }
-  ]
+    "users": [{
+            "id": "1",
+            "name": "Gideon",
+            "email": "gideon@gmail.com",
+            "password": "password1"
+        },
+        {
+            "name": "Frank",
+            "email": "frank@gmail.com",
+            "password": "password2",
+            "id": "coLOWNG"
+        }
+    ]
 }

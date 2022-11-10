@@ -9,7 +9,7 @@
         placeholder="Enter Password"
         required
       />
-      <button @click="Login">Login</button>
+      <button @click="login">Login</button>
       <router-link to="/sign-up">
         <p>Sign Up</p>
       </router-link>
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "LoginPage",
   data() {
@@ -26,6 +27,28 @@ export default {
       password: "",
     };
   },
+  methods: {
+    //verifying if user has details in the backend before taking user to home page
+    async login() {
+        try {
+        const response = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`);
+        if(response.status == 200 && response.data.length > 0){
+            localStorage.setItem('user-info', JSON.stringify(response.data[0]))
+            this.$router.push({name: 'Home'})
+        } else {
+            alert("Wrong credentials")
+        }
+        } catch (error) {
+            alert("Something happened please try again")
+        }
+    }
+  },
+  created(){
+    let user = localStorage.getItem('user-info');
+    if(user){
+        this.$router.push({name: 'Home'})
+    }
+  }
 };
 </script>
 
