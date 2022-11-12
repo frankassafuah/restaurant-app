@@ -1,34 +1,42 @@
 {
-    "users": [{
-            "id": "1",
-            "name": "Gideon",
-            "email": "gideon@gmail.com",
-            "password": "password1"
-        },
-        {
-            "name": "Frank",
-            "email": "frank@gmail.com",
-            "password": "password2",
-            "id": "coLOWNG"
-        }
-    ],
-    "restaurants": [{
-            "id": "1",
-            "name": "Burger King",
-            "contact": "123455",
-            "address": "Accra mall 50"
-        },
-        {
-            "id": "2",
-            "name": "Dominos",
-            "contact": "1113455",
-            "address": "Kumasi mall 20"
-        },
-        {
-            "id": "3",
-            "name": "KFC",
-            "contact": "3155455",
-            "address": "Takoradi mall 70"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "Gideon",
+      "email": "gideon@gmail.com",
+      "password": "password1"
+    },
+    {
+      "name": "Frank",
+      "email": "frank@gmail.com",
+      "password": "password2",
+      "id": "coLOWNG"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Burger King",
+      "contact": "123455",
+      "address": "Accra mall 50"
+    },
+    {
+      "id": "2",
+      "name": "Dominos",
+      "contact": "1113455",
+      "address": "Kumasi mall 20"
+    },
+    {
+      "id": "3",
+      "name": "KFC",
+      "contact": "3155455",
+      "address": "Takoradi mall 70"
+    },
+    {
+      "name": "Sweet shreds",
+      "address": "Borteymann ssnit flat",
+      "contact": "003482",
+      "id": "5Lp5hjQ"
+    }
+  ]
 }

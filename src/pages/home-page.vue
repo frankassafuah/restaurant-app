@@ -4,13 +4,13 @@
     <h1>Hello {{ user.name }}, welcome to Home Page</h1>
     <table border="1px">
       <tr>
-        <th>ID</th>
+        <th>No</th>
         <th>Name</th>
         <th>Contact</th>
         <th>Address</th>
       </tr>
-      <tr v-for="restaurant in restaurants" :key="restaurant.id">
-        <td>{{ restaurant.id }}</td>
+      <tr v-for="(restaurant, index) in restaurants" :key="restaurant.id">
+        <td>{{ index + 1 }}</td>
         <td>{{ restaurant.name }}</td>
         <td>{{ restaurant.contact }}</td>
         <td>{{ restaurant.address }}</td>
@@ -18,7 +18,6 @@
     </table>
   </div>
 </template>
-
 <script>
 import Header from "../components/header.vue";
 import axios from "axios";
@@ -57,13 +56,13 @@ export default {
 </script>
 
 <style scoped>
-table{
-    margin: 0 auto ;
+table {
+  margin: 0 auto;
 }
 
-th, td {
-    width: 160px;
-    height: 40px;
+th,
+td {
+  width: 160px;
+  height: 40px;
 }
-
 </style>
