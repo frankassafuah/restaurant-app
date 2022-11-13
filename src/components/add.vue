@@ -6,7 +6,7 @@
             <input type="text" placeholder="Enter Name" v-model="form.name">
             <input type="text" placeholder="Enter Address" v-model="form.address">
             <input type="text" placeholder="Enter Contact" v-model="form.contact">
-            <button type="button" @click="addRestaurant" >Add new restaurant</button>
+            <button type="button" @click="addRestaurant" >Add</button>
         </form>
     </div>
 </template>

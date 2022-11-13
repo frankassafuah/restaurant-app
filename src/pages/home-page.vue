@@ -15,7 +15,9 @@
         <td>{{ restaurant.name }}</td>
         <td>{{ restaurant.contact }}</td>
         <td>{{ restaurant.address }}</td>
-        <td><router-link :to="`/update-restaurant/${restaurant.id}`">Update</router-link></td>
+        <td><router-link :to="`/update-restaurant/${restaurant.id}`">Update</router-link>
+        <button type="button" @click="deleteRestaurant(restaurant.id)">Delete</button>
+        </td>
       </tr>
     </table>
   </div>
@@ -45,7 +47,7 @@ export default {
     this.getRestaurants();
   },
   methods: {
-    async getRestaurants() {
+    async getRestaurants(){
       try {
         const response = await axios.get("http://localhost:3000/restaurants");
         if (response) {
@@ -53,6 +55,13 @@ export default {
         }
       } catch (error) {}
     },
+
+    async deleteRestaurant(id) {
+        const response = await axios.delete(`http://localhost:3000/restaurants/${id}`);
+        if(response){
+            this.restaurants = this.restaurants.filter(item => item.id !== id);
+        }
+    }
   },
 };
 </script>
@@ -66,5 +75,9 @@ th,
 td {
   width: 160px;
   height: 40px;
+}
+
+button {
+    margin-left: 10px;
 }
 </style>

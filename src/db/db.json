@@ -27,16 +27,10 @@
       "address": "Kumasi mall 20"
     },
     {
-      "id": "3",
-      "name": "KFC",
-      "contact": "3155455",
-      "address": "Takoradi mall 70"
-    },
-    {
-      "name": "Sweet shreds",
-      "address": "Borteymann ssnit flat",
-      "contact": "003482",
-      "id": "5Lp5hjQ"
+      "name": "KFC Legon",
+      "address": "Legon 33",
+      "contact": "23412",
+      "id": "dxCg_Il"
     }
   ]
 }
