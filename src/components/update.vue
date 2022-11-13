@@ -22,40 +22,49 @@ export default {
   data() {
     return {
       form: {},
-      restaurant: null
+      restaurant: null,
     };
   },
   methods: {
     async getRestaurantUpdate() {
-        try {
-            const response = await axios.get(`http://localhost:3000/restaurants/${this.$route.params.id}`);
-            if(response){
-                this.restaurant = response.data
-            }
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/restaurants/${this.$route.params.id}`
+        );
+        if (response) {
+          this.restaurant = response.data;
+        }
+      } catch (error) {
+        alert("something happened");
+      }
+    },
+
+    async updateRestaurant() {
+        try{
+            const response = await axios.put()
         } catch (error) {
-            alert("something happened")
+
         }
     }
   },
 
   created() {
     //redirect user to sign up page if user is not logged in
-    
+
     let user = localStorage.getItem("user-info");
     if (!user) {
       this.$router.push({ name: "SignUp" });
-    };
+    }
 
     this.getRestaurantUpdate();
   },
   watch: {
-    restaurant(newValue){
-        if(newValue){
-            this.form = {
-            ...newValue
-        }
-        }
-        
+    restaurant(newValue) {
+      if (newValue) {
+        this.form = {
+          ...newValue,
+        };
+      }
     }
   }
 };
