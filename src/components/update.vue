@@ -6,7 +6,7 @@
       <input type="text" placeholder="Enter Name" v-model="form.name" />
       <input type="text" placeholder="Enter Address" v-model="form.address" />
       <input type="text" placeholder="Enter Contact" v-model="form.contact" />
-      <button type="button">Update</button>
+      <button type="button" @click="updateRestaurant">Update</button>
     </form>
   </div>
 </template>
@@ -43,7 +43,7 @@ export default {
         try{
             const response = await axios.put(`http://localhost:3000/restaurants/${this.$route.params.id}`, this.form);
             if(response){
-                alert("Update successful")
+                this.$router.push({name: 'Home'})
             }
         } catch (error) {
             alert("Something happened")
