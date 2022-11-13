@@ -41,9 +41,12 @@ export default {
 
     async updateRestaurant() {
         try{
-            const response = await axios.put()
+            const response = await axios.put(`http://localhost:3000/restaurants/${this.$route.params.id}`, this.form);
+            if(response){
+                alert("Update successful")
+            }
         } catch (error) {
-
+            alert("Something happened")
         }
     }
   },
